@@ -1,6 +1,4 @@
-import {View, Text, StyleSheet,
-  TextInput, TouchableOpacity,
-  ScrollView,Image } from "react-native";
+import {View, Text, StyleSheet,Image } from "react-native";
 import {StatusBar} from "expo-status-bar";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Admin from "./ComponeteAdmin";
@@ -22,24 +20,38 @@ export default function TelaAdmi() {
                             size={30}
                             color="#626262"/>
                     </View>
+                    
             </View>  
             <View style={estilos.linha1}>
             <Admin nome="Requerimentos"/>
             <Admin nome="Notas"/>
             </View>
-   <View style={estilos.linha3}>
-                <Admin nome="Frequência"/>
-            <Admin nome="Avaliações"/>
-   </View>
-<View style={estilos.linha2}>
-  <Admin nome="Financeiro"/>
-  <Admin nome="Documentos"/>
-</View>
+            <View style={estilos.linha3}>
+              <Admin nome="Frequência"/>
+              <Admin nome="Avaliações"/>
+            </View>
+          <View style={estilos.linha2}>
+            <Admin nome="Financeiro"/>
+            <Admin nome="Documentos"/>
             
-
+          </View>
+          <View>
+            <View style={estilos.ImageSenai}>
+            <Image source={require('./assets/logo_senai.png')}/>
+            </View>
+          </View>
+            
+           
     
             </View>
+                 
+
           <StatusBar style="auto"/> 
+ 
+
+
+  <Image source={require('./assets/logo_senai.png')}/>
+         
 
     </View>
 
@@ -91,6 +103,11 @@ linha3:{
   flexDirection:"row"
 
 },
+ImageSenai:{
+  justifyContent:"center",
+  alignItems:"center",
+}
+
 
 
 });
